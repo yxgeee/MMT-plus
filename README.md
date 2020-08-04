@@ -1,9 +1,5 @@
 ## Solution for VisDA 2020 [[Technique Report]](files/visda.pdf)
 
-<p align="center">
-    <img src="files/pipeline.png" width="100%">
-</p>
-
 ### Requirements
 
 + Python 3
@@ -60,10 +56,14 @@ The trained models for our submission can be downloaded from:
 
 ### Training
 
+<p align="center">
+    <img src="files/pipeline.png" width="100%">
+</p>
+
 #### Stage I: SDA
 
 <p align="center">
-    <img src="files/sda.png" width="60%">
+    <img src="files/sda.png" width="70%">
 </p>
 
 You could directly download the generated images from [[Google Drive]](https://drive.google.com/file/d/1gX_A2AknZp8GtQqgtW2UVwcSCmhFhOgN/view?usp=sharing), or you could use the following scripts to train your own SDA model.
