@@ -102,3 +102,31 @@ You could directly download the generated images from [[Google Drive]](https://d
 ```shell
 ./scripts/train_mmt_dbscan.sh $ARCH $PARTITION
 ```
+
+### Citation
+If you find this code useful for your research, please consider cite:
+```
+@article{ge2020improved,
+  title   = {Improved Mutual Mean-Teaching for Unsupervised Domain Adaptive Re-ID},
+  author  = {Yixiao Ge and Shijie Yu and Dapeng Chen},
+  howpublished = {\url{https://github.com/yxgeee/VisDA-ECCV20/blob/master/files/visda.pdf}},
+  year = {2020}
+}
+
+@inproceedings{ge2020mutual,
+  title={Mutual Mean-Teaching: Pseudo Label Refinery for Unsupervised Domain Adaptation on Person Re-identification},
+  author={Yixiao Ge and Dapeng Chen and Hongsheng Li},
+  booktitle={International Conference on Learning Representations},
+  year={2020},
+  url={https://openreview.net/forum?id=rJlnOhVYPS}
+}
+
+@misc{ge2020structured,
+    title={Structured Domain Adaptation with Online Relation Regularization for Unsupervised Person Re-ID},
+    author={Yixiao Ge and Feng Zhu and Rui Zhao and Hongsheng Li},
+    year={2020},
+    eprint={2003.06650},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+```
