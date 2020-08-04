@@ -38,12 +38,12 @@ examples
 
 The trained models for our submission can be downloaded from:
 + Re-ID model:
-  + ResNeSt-50 [[Google Drive]]()
-  + ResNeSt-101 [[Google Drive]]()
-  + DenseNet-169-IBN [[Google Drive]]()
-  + ResNeXt-101-IBN [[Google Drive]]()
+  + ResNeSt-50 [[Google Drive]](https://drive.google.com/file/d/1Wd0SZB_K896rrcmBTOKtvN8U_GlgCfLc/view?usp=sharing)
+  + ResNeSt-101 [[Google Drive]](https://drive.google.com/file/d/1U99XtSUxejH_RjdbNShKQKQ4SvleROJA/view?usp=sharing)
+  + DenseNet-169-IBN [[Google Drive]](https://drive.google.com/file/d/1oOzYsGzqIC4m9u_dOw4UOJ4d-wlZ9zTA/view?usp=sharing)
+  + ResNeXt-101-IBN [[Google Drive]](https://drive.google.com/file/d/1SvflLaRifGtl5hh5kw6ZsVIABjxdEp-w/view?usp=sharing)
 + Camera model:
-  + ResNeSt-50 [[Google Drive]]()
+  + ResNeSt-50 [[Google Drive]](https://drive.google.com/file/d/1qd8ybMtLWXRQOasQzHLh6ZWFLOvwv4Pe/view?usp=sharing)
 
 #### Test a single model
 ```shell
