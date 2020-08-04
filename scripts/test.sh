@@ -3,7 +3,7 @@ ARCH=$1
 MODEL=$2
 PARTITION=$3
 
-ARCHC=resnet_ibn50a
+ARCHC=resnest50
 
 srun --mpi=pmi2 -p $PARTITION \
       -n1 --gres=gpu:1 --ntasks-per-node=1 \

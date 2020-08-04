@@ -6,12 +6,6 @@ import torch.utils.model_zoo as model_zoo
 
 __all__ = ['ResNet', 'resnet50_ibn_a', 'resnet101_ibn_a']
 
-
-# model_urls = {
-#     'ibn_resnet50a': './logs/pretrained/resnet50_ibn_a.pth.tar',
-#     'ibn_resnet101a': './logs/pretrained/resnet101_ibn_a.pth.tar',
-# }
-
 model_urls = {
     "resnet50_ibn_a": "https://github.com/XingangPan/IBN-Net/releases/download/v1.0/resnet50_ibn_a-d9d0bb7b.pth",
     "resnet101_ibn_a": "https://github.com/XingangPan/IBN-Net/releases/download/v1.0/resnet101_ibn_a-59ea0ac6.pth",

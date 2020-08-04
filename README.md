@@ -1,28 +1,25 @@
-# Solution for VisDA 2020
+## Solution for VisDA 2020 [[Technique Report]](visda.pdf)
 
-[Technique Report](visda.pdf)
+### Requirements
 
-## Requirements
-
-+ Python 3.*
++ Python 3
 + PyTorch >= 1.1
 
-#### Installation
+### Installation
 
++ Install `visda` library
 ```shell
-python setup.py install
+python setup.py develop
 ```
-
-#### Nvidia Apex (optional, for mixed precision training)
++ Install `NVIDIA/apex` library (optional, for mixed precision training)
 ```shell
 git clone https://github.com/NVIDIA/apex.git
 cd apex
-python setup.py install --user # cuda 9.0
-python setup.py install --cuda_ext --cpp_ext --user # cuda 10.0
+python setup.py install --cuda_ext --cpp_ext
 ```
-Active mixed precision training by adding `--fp16` in the training commands.
+Active it by adding `--fp16` in the training commands.
 
-#### Prepare Datasets
+### Prepare Datasets
 ```
 examples
 ├── data
@@ -37,8 +34,27 @@ examples
 └── └── target_validation
 ```
 
+### Testing
 
-## Training
+The trained models for our submission can be downloaded from:
++ Re-ID model:
+  + ResNeSt-50 [[Google Drive]]()
+  + ResNeSt-101 [[Google Drive]]()
+  + DenseNet-169-IBN [[Google Drive]]()
+  + ResNeXt-101-IBN [[Google Drive]]()
++ Camera model:
+  + ResNeSt-50 [[Google Drive]]()
+
+#### Test a single model
+```shell
+./scripts/test.sh $ARCH $PATH $PARTITION
+```
+#### Model ensembling and testing
+```shell
+./scripts/test_ensemble.sh $PARTITION
+```
+
+### Training
 
 #### Stage I: SDA
 
@@ -64,15 +80,4 @@ You could directly download the generated images from [Google Drive](https://dri
 
 ```shell
 ./scripts/train_mmt_dbscan.sh $ARCH $PARTITION
-```
-
-#### Testing
-
-+ Test a single model:
-```shell
-./scripts/test.sh $ARCH $PATH $PARTITION
-```
-+ Model ensembling and testing:
-```shell
-./scripts/test_ensemble.sh $PARTITION
 ```
