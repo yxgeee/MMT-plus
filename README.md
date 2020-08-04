@@ -1,4 +1,6 @@
-## Solution for VisDA 2020 [[Technique Report]](visda.pdf)
+## Solution for VisDA 2020 [[Technique Report]](files/visda.pdf)
+
+<img src="files/pipeline.png" alt="pipeline"/>
 
 ### Requirements
 
@@ -11,7 +13,7 @@
 ```shell
 python setup.py develop
 ```
-+ Install `NVIDIA/apex` library (optional, for mixed precision training)
++ Install `NVIDIA/apex` library (**optional**, for mixed precision training)
 ```shell
 git clone https://github.com/NVIDIA/apex.git
 cd apex
@@ -58,7 +60,9 @@ The trained models for our submission can be downloaded from:
 
 #### Stage I: SDA
 
-You could directly download the generated images from [Google Drive](https://drive.google.com/file/d/1gX_A2AknZp8GtQqgtW2UVwcSCmhFhOgN/view?usp=sharing), or you could use the following scripts to train your own SDA model.
+<img src="files/sda.png" alt="sda" style="zoom:80%;"/>
+
+You could directly download the generated images from [[Google Drive]](https://drive.google.com/file/d/1gX_A2AknZp8GtQqgtW2UVwcSCmhFhOgN/view?usp=sharing), or you could use the following scripts to train your own SDA model.
 
 + Train SDA:
 ```shell
@@ -73,10 +77,12 @@ You could directly download the generated images from [Google Drive](https://dri
 
 ```shell
 ./scripts/pretrain.sh $ARCH 1 $PARTITION
-./scripts/pretrain.sh $ARCH 2 $PARTITION # train twice for init MMT
+./scripts/pretrain.sh $ARCH 2 $PARTITION
 ```
 
 #### Stage III: MMT+ training
+
+<img src="files/mmt+.png" alt="mmt" style="zoom:80%;"/>
 
 ```shell
 ./scripts/train_mmt_dbscan.sh $ARCH $PARTITION
