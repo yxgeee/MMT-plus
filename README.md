@@ -54,6 +54,14 @@ The trained models for our submission can be downloaded from:
 ./scripts/test_ensemble.sh $PARTITION
 ```
 
+| Team Name | mAP(%) | top-1(%) |
+| ----- | :------: | :---------: |
+| Logwhen | 79.05 | 83.26 |
+| Vimar Team | 76.56 | 84.25 |
+| **Ours** | **74.78** | **82.86** |
+| Xiangyu | 72.39 | 83.85 |
+| Archer2 | 70.39 | 79.70 |
+
 ### Training
 
 <p align="center">
