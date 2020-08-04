@@ -1,6 +1,8 @@
 ## Solution for VisDA 2020 [[Technique Report]](files/visda.pdf)
 
-<img src="files/pipeline.png" alt="pipeline"/>
+<p align="center">
+    <img src="files/pipeline.png" width="100%">
+</p>
 
 ### Requirements
 
@@ -60,7 +62,9 @@ The trained models for our submission can be downloaded from:
 
 #### Stage I: SDA
 
-<img src="files/sda.png" alt="sda" style="zoom:80%;"/>
+<p align="center">
+    <img src="files/sda.png" width="60%">
+</p>
 
 You could directly download the generated images from [[Google Drive]](https://drive.google.com/file/d/1gX_A2AknZp8GtQqgtW2UVwcSCmhFhOgN/view?usp=sharing), or you could use the following scripts to train your own SDA model.
 
@@ -82,7 +86,9 @@ You could directly download the generated images from [[Google Drive]](https://d
 
 #### Stage III: MMT+ training
 
-<img src="files/mmt+.png" alt="mmt" style="zoom:80%;"/>
+<p align="center">
+    <img src="files/mmt+.png" width="100%">
+</p>
 
 ```shell
 ./scripts/train_mmt_dbscan.sh $ARCH $PARTITION
