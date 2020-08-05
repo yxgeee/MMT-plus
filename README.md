@@ -47,12 +47,15 @@ The trained models for our submission can be downloaded from:
 
 #### Test a single model
 ```shell
-./scripts/test.sh $ARCH $PATH $PARTITION
+CUDA_VISIBLE_DEVICES=0 ./scripts/test.sh $ARCH_REID $PATH_REID $ARCH_CAMERA $PATH_CAMERA
 ```
+If you want to test a model without domain-specific BN (e.g. pre-trained model), you need to remove `--dsbn` from `scripts/test.sh`.
+
 #### Model ensembling and testing
 ```shell
-./scripts/test_ensemble.sh $PARTITION
+CUDA_VISIBLE_DEVICES=0 ./scripts/test_ensemble.sh
 ```
+Please make sure the model path in `scripts/test_ensemble.sh` is correct before testing.
 
 #### Top-5 results on the leaderboard
 | Team Name | mAP(%) | top-1(%) |
@@ -79,18 +82,18 @@ You could directly download the generated images from [[Google Drive]](https://d
 
 + Train SDA:
 ```shell
-./scripts/train_sda.sh $PARTITION
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 ./scripts/train_sda.sh $ARCH $SOUECE_MODEL $TARGET_MODEL
 ```
 + Generate source-to-target images:
 ```shell
-./scripts/test_sda.sh $PATH $PARTITION
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 ./scripts/test_sda.sh $PATH_OF_GENERATOR
 ```
 
 #### Stage II: Pre-training
 
 ```shell
-./scripts/pretrain.sh $ARCH 1 $PARTITION
-./scripts/pretrain.sh $ARCH 2 $PARTITION
+CUDA_VISIBLE_DEVICES=0,1,2,3 ./scripts/pretrain.sh personx_sda $ARCH 1
+CUDA_VISIBLE_DEVICES=0,1,2,3 ./scripts/pretrain.sh personx_sda $ARCH 2
 ```
 
 #### Stage III: Improved Mutual Mean-Teaching (MMT+)
@@ -100,7 +103,13 @@ You could directly download the generated images from [[Google Drive]](https://d
 </p>
 
 ```shell
-./scripts/train_mmt_dbscan.sh $ARCH $PARTITION
+CUDA_VISIBLE_DEVICES=0,1,2,3 ./scripts/train_mmt_dbscan.sh $ARCH
+```
+
+#### Post-processing: Camera Classification
+
+```shell
+CUDA_VISIBLE_DEVICES=0 ./scripts/camera.sh $ARCH
 ```
 
 ### Citation

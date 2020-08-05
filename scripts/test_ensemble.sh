@@ -1,9 +1,4 @@
 #!/bin/sh
-PARTITION=$1
-
-srun --mpi=pmi2 -p $PARTITION \
-      -n1 --gres=gpu:1 --ntasks-per-node=1 \
-      --job-name=test \
 python -u examples/test_ensemble.py -d target_val \
     --rerank --k1 30 --k2 6 --lambda-value 0.3 --dsbn --flip \
     -ac resnest50 \
