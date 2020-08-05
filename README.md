@@ -9,6 +9,8 @@
 
 + Install `visda` library
 ```shell
+git clone https://github.com/yxgeee/VisDA-ECCV20.git
+cd VisDA-ECCV20
 python setup.py develop
 ```
 + Install `NVIDIA/apex` library (**optional**, for mixed precision training)
@@ -20,6 +22,7 @@ python setup.py install --cuda_ext --cpp_ext
 Active it by adding `--fp16` in the training commands.
 
 ### Prepare Datasets
+`personX_sda` can be downloaded from [[Google Drive]](https://drive.google.com/file/d/1gX_A2AknZp8GtQqgtW2UVwcSCmhFhOgN/view?usp=sharing), while the others can be downloaded from [[Simon4Yan/VisDA2020]](https://github.com/Simon4Yan/VisDA2020#challenge-data).
 ```
 examples
 ├── data
@@ -106,11 +109,13 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 ./scripts/pretrain.sh personx_sda $ARCH 2
 CUDA_VISIBLE_DEVICES=0,1,2,3 ./scripts/train_mmt_dbscan.sh $ARCH
 ```
 
-#### Post-processing: Camera Classification
+#### Post-processing: Camera Classification Training
 
 ```shell
 CUDA_VISIBLE_DEVICES=0 ./scripts/camera.sh $ARCH
 ```
+The trained camera model will be used in the inference stage.
+
 
 ### Citation
 If you find this code useful for your research, please consider cite:
@@ -139,3 +144,6 @@ If you find this code useful for your research, please consider cite:
     primaryClass={cs.CV}
 }
 ```
+
+### Acknowledgement
+This code is mainly based on [MMT](https://github.com/yxgeee/MMT). 
