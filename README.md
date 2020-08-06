@@ -79,9 +79,9 @@ Please make sure the model path in `scripts/test_ensemble.sh` is correct before 
 
 You could directly download the generated images from [[Google Drive]](https://drive.google.com/file/d/1gX_A2AknZp8GtQqgtW2UVwcSCmhFhOgN/view?usp=sharing), or you could use the following scripts to train your own SDA model.
 
-<p align="center">
+<!-- <p align="center">
     <img src="files/sda.png" width="70%">
-</p>
+</p> -->
 
 + Train SDA:
 ```shell
@@ -101,9 +101,9 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 ./scripts/pretrain.sh personx_sda $ARCH 2
 
 #### Stage III: Improved Mutual Mean-Teaching (MMT+)
 
-<p align="center">
+<!-- <p align="center">
     <img src="files/mmt+.png" width="100%">
-</p>
+</p> -->
 
 ```shell
 CUDA_VISIBLE_DEVICES=0,1,2,3 ./scripts/train_mmt_dbscan.sh $ARCH
@@ -146,4 +146,4 @@ If you find this code useful for your research, please consider cite:
 ```
 
 ### Acknowledgement
-This code is mainly based on [MMT](https://github.com/yxgeee/MMT). 
+This code is mainly based on [MMT](https://github.com/yxgeee/MMT).
