@@ -1,4 +1,4 @@
-## Solution for VisDA 2020 [[Technique Report]](files/visda.pdf)
+## Solution for VisDA 2020 [[Technique Report]](https://arxiv.org/abs/2008.10313)
 
 ### Requirements
 
