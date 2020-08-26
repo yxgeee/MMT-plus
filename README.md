@@ -1,4 +1,7 @@
-## Solution for VisDA 2020 [[Technique Report]](https://arxiv.org/abs/2008.10313)
+## Solution for VisDA 2020 
+
++ Technique Report: [arXiv](https://arxiv.org/abs/2008.10313) or [GitHub](files/visda.pdf)
++ Video Introduction: [YouTube](https://youtu.be/Ox-ZJhgFwSU) or [bilibili](https://www.bilibili.com/video/BV14V411U7mb)
 
 ### Requirements
 
