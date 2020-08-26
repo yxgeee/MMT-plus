@@ -118,11 +118,13 @@ The trained camera model will be used in the inference stage.
 ### Citation
 If you find this code useful for your research, please consider cite:
 ```
-@article{ge2020improved,
-  title   = {Improved Mutual Mean-Teaching for Unsupervised Domain Adaptive Re-ID},
-  author  = {Yixiao Ge and Shijie Yu and Dapeng Chen},
-  howpublished = {\url{https://github.com/yxgeee/VisDA-ECCV20/blob/master/files/visda.pdf}},
-  year = {2020}
+@misc{ge2020improved,
+    title={Improved Mutual Mean-Teaching for Unsupervised Domain Adaptive Re-ID},
+    author={Yixiao Ge and Shijie Yu and Dapeng Chen},
+    year={2020},
+    eprint={2008.10313},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
 }
 
 @inproceedings{ge2020mutual,
