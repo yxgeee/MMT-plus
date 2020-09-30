@@ -12,8 +12,8 @@
 
 + Install `visda` library
 ```shell
-git clone https://github.com/yxgeee/VisDA-ECCV20.git
-cd VisDA-ECCV20
+git clone https://github.com/yxgeee/MMT-plus.git
+cd MMT-plus
 python setup.py develop
 ```
 + Install `NVIDIA/apex` library (**optional**, for mixed precision training)
